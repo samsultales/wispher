@@ -1,0 +1,16 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+faster-whisper>=1.1.0
+# av >= 16 menghapus argumen 'metadata_errors' yang masih dipakai faster-whisper
+av>=11,<16
+# Pemisahan vokal (PyTorch versi CPU)
+torch
+torchaudio
+demucs>=4.0.1
+# Library CUDA 12 untuk faster-whisper di GPU (WHISPER_DEVICE=cuda)
+nvidia-cublas-cu12
+nvidia-cudnn-cu12>=9,<10
+# Dekripsi file recorder AES-128-CBC
+cryptography
